@@ -7,7 +7,14 @@ classes_attended = int(input("Enter number of classes attended: "))
 # Calculate attendance percentage
 attendance = (classes_attended / classes_held) * 100
 
-# Display result
+# Determine eligibility
+if attendance >= 75:
+    status = "Eligible for exams"
+else:
+    status = "Not eligible for exams"
+
+# Display results
 print("Classes Held:", classes_held)
 print("Classes Attended:", classes_attended)
-print("Attendance:", attendance, "%")
+print("Attendance:", round(attendance, 2), "%")
+print("Status:", status)
